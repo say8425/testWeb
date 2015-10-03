@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>레페리 테스트</title>	
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		
+		<script src="greensock/TweenMax.min.js"></script>
+		<script src="js/scrollmagic/uncompressed/ScrollMagic.js"></script>
+		<script src="js/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+		<script src="js/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+
+		<script type="text/javascript" src="skrollr.min.js"></script>
+	</head>
+	<body style="height: 5500px">
+		<img id="logo" src="logo.png"></img>
+		<img id="logo-fix" src="logo.png" style="position: fixed; right: 5px;"</img>
+
+		<div id="pxPt"></div>
+	
+		<!-- You'll be not able to see loose1.png in GIF, cause did not recored -->			
+		<img id="ptt1" src="loose1.png"></img>
+		<img id="ptt2" src="loose2.png"></img>
+		<img id="ptt3" src="loose3.png"></img>
+	</body>
+</html>
+
+<script>
+	$(function () { // wait for document ready
+		var controller = new ScrollMagic.Controller();
+		// build scene
+		var logoScene = new ScrollMagic.Scene({
+	        duration: 0,  // the scene should last for a scroll distance of 100px
+	        offset: 1      // start this scene after scrolling for 50px
+    	})
+		.setPin("#logo") // pins the element for the the scene's duration
+		.addTo(controller);
+		
+		var tween = new TimelineMax()
+		.add([
+			TweenMax.fromTo("#ptt1", 1, {scale: 1, autoAlpha: 0.05, top: 150}, {top: 5250, ease: Linear.easeNone}),
+			TweenMax.fromTo("#ptt2", 1, {scale: 1, autoAlpha: 0.42, top: 50}, {top: 5350, ease: Linear.easeNone}),
+			TweenMax.fromTo("#ptt3", 1, {scale: 1, autoAlpha: 0.42, top: 75}, {top: 5500, ease: Linear.easeNone})
+		]);
+		
+		var parallaxScene = new ScrollMagic.Scene({
+			triggerElement: "#pxPt",
+			duration: 5500
+		})
+		.setTween(tween)
+		.addIndicators()
+		.addTo(controller);
+    });
+</script>

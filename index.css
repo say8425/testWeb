@@ -1,0 +1,40 @@
+/* @import url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css); */
+/*
+	@font-face {
+		font-family: 'NotoSansKR';
+		src: url('https://s3-ap-northeast-1.amazonaws.com/northpenguin/notoSana-hestia/NotoSansKR-Regular-Hestia.woff') format('woff')
+	}
+*/
+	@font-face {
+		font-family: 'NotoSansKR';
+		src: url('https://d1syjqtm3n9oqz.cloudfront.net/notoSana-hestia/NotoSansKR-Regular-Hestia.woff') format('woff')
+	}
+	
+	
+h2 {
+	font-family: 'NotoSansKR';
+}
+
+#skdiv {
+	height: 500px;
+}
+
+#ptt1 {
+	left: 10px;
+	position: relative;
+}
+
+#ptt2 {
+	left: 250px;
+	position: relative;
+}
+
+#ptt3 {
+	left: 350px;
+	position: relative;
+}
+
+
+#pxPt {
+/* 	height: 5500px; */
+}
