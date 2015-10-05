@@ -5,50 +5,62 @@
 		<link rel="stylesheet" type="text/css" href="index.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		
-		<script src="greensock/TweenMax.min.js"></script>
-		<script src="js/scrollmagic/uncompressed/ScrollMagic.js"></script>
-		<script src="js/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
-		<script src="js/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
-
-		<script type="text/javascript" src="skrollr.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="jquery.pagepiling.css" />
+		<script type="text/javascript" src="jquery.pagepiling.js"></script>
 	</head>
-	<body style="height: 5500px">
-		<img id="logo" src="logo.png"></img>
-		<img id="logo-fix" src="logo.png" style="position: fixed; right: 5px;"</img>
-
-		<div id="pxPt"></div>
-	
-		<!-- You'll be not able to see loose1.png in GIF, cause did not recored -->			
-		<img id="ptt1" src="loose1.png"></img>
-		<img id="ptt2" src="loose2.png"></img>
-		<img id="ptt3" src="loose3.png"></img>
+	<body>
+		<header id="menu">
+			<nav>
+				<a>Home</a>
+				<a>Company</a>
+				<a>Creators</a>
+				<a>Portpolio</a>
+				<a>News</a>
+				<a>Apply</a>
+				<a>Contact</a>
+			</nav>
+		</header>
+		
+		<div id="pagepiling">
+		    <div id="section1" class="section">
+			    <video id="leferiIntro" loop="" autoplay="" muted="">
+				    <source src="leferiIntro.mp4" type="video/mp4">
+			    </video>
+				<img class="loose" id="loose1" src="loose1.png">
+				<img class="loose" id="loose2" src="loose2.png">
+				<img class="loose" id="loose3" src="loose3.png">
+				<img class="loose" id="loose4" src="loose1.png">
+				<img class="loose" id="loose5" src="loose2.png">
+				<img class="loose" id="loose6" src="loose3.png">
+				<img class="loose" id="loose7" src="loose1.png">
+				<img class="loose" id="loose8" src="loose2.png">
+				<img class="loose" id="loose9" src="loose3.png">
+		    </div>
+		    
+		    <div id="section2" class="section">Some section</div>
+		    <div id="section3" class="section">Some section</div>
+		    <div id="section4" class="section">Some section</div>
+		</div>
 	</body>
 </html>
 
 <script>
-	$(function () { // wait for document ready
-		var controller = new ScrollMagic.Controller();
-		// build scene
-		var logoScene = new ScrollMagic.Scene({
-	        duration: 0,  // the scene should last for a scroll distance of 100px
-	        offset: 1      // start this scene after scrolling for 50px
-    	})
-		.setPin("#logo") // pins the element for the the scene's duration
-		.addTo(controller);
-		
-		var tween = new TimelineMax()
-		.add([
-			TweenMax.fromTo("#ptt1", 1, {scale: 1, autoAlpha: 0.05, top: 150}, {top: 5250, ease: Linear.easeNone}),
-			TweenMax.fromTo("#ptt2", 1, {scale: 1, autoAlpha: 0.42, top: 50}, {top: 5350, ease: Linear.easeNone}),
-			TweenMax.fromTo("#ptt3", 1, {scale: 1, autoAlpha: 0.42, top: 75}, {top: 5500, ease: Linear.easeNone})
-		]);
-		
-		var parallaxScene = new ScrollMagic.Scene({
-			triggerElement: "#pxPt",
-			duration: 5500
-		})
-		.setTween(tween)
-		.addIndicators()
-		.addTo(controller);
-    });
+	$(document).ready(function() {
+	    $('#pagepiling').pagepiling({
+		    onLeave: function(index, nextIndex, direction) {
+			    if (index == 1 && direction == 'down') {
+					$('#loose1').animate({bottom:'1450px', opacity:0.4}, 2000);
+					$('#loose2').animate({bottom:'1350px', opacity:0.3}, 2150);
+					$('#loose3').animate({bottom:'1550px', opacity:0.3}, 2650);
+					$('#loose4').animate({bottom:'1150px', opacity:0.4}, 2000);
+					$('#loose5').animate({bottom:'1290px', opacity:0.3}, 2150);
+					$('#loose6').animate({bottom:'1300px', opacity:0.3}, 2650);
+					$('#loose7').animate({bottom:'1410px', opacity:0.4}, 2000);
+					$('#loose8').animate({bottom:'1240px', opacity:0.3}, 2150);
+					$('#loose9').animate({bottom:'1510px', opacity:0.3}, 2650);
+			    }
+		    }
+	    });
+	});
+	
 </script>
