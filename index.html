@@ -4,7 +4,6 @@
 		<title>레페리 테스트</title>	
 		<link rel="stylesheet" type="text/css" href="index.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		
 		<link rel="stylesheet" type="text/css" href="jquery.pagepiling.css" />
 		<script type="text/javascript" src="jquery.pagepiling.js"></script>
 	</head>
@@ -23,9 +22,9 @@
 		
 		<div id="pagepiling">
 		    <div id="section1" class="section">
-			    <video id="leferiIntro" loop autoplay muted>
-				    <source src="https://d1syjqtm3n9oqz.cloudfront.net/leferi-video/leferiIntro.mp4" type="video/mp4">
-			    </video>
+			    <video id="leferiIntro" loop autoplay muted controls>
+			    	<source src="https://d1syjqtm3n9oqz.cloudfront.net/leferi-video/leferiIntro.mp4" type="video/mp4">
+		    	</video>
 				<img class="loose" id="loose1" src="loose1.png">
 				<img class="loose" id="loose2" src="loose2.png">
 				<img class="loose" id="loose3" src="loose3.png">
@@ -46,8 +45,6 @@
 
 <script>
 	$(function() {
-
-		
 	    $('#pagepiling').pagepiling({
 		    onLeave: function(index, nextIndex, direction) {
 			    if (index == 1 && direction == 'down') {
