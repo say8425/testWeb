@@ -22,9 +22,12 @@
 		
 		<div id="pagepiling">
 		    <div id="section1" class="section">
-			    <video id="leferiIntro" loop autoplay muted>
+			    <video id="leferiIntro" loop autoplay controls muted>
 			    	<source src="https://d1syjqtm3n9oqz.cloudfront.net/leferi-video/leferiIntro.mp4" type="video/mp4">
 		    	</video>
+		    </div>
+		    
+		    <div id="section2" class="section">
 				<img class="loose" id="loose1" src="loose1.png">
 				<img class="loose" id="loose2" src="loose2.png">
 				<img class="loose" id="loose3" src="loose3.png">
@@ -34,9 +37,8 @@
 				<img class="loose" id="loose7" src="loose1.png">
 				<img class="loose" id="loose8" src="loose2.png">
 				<img class="loose" id="loose9" src="loose3.png">
+
 		    </div>
-		    
-		    <div id="section2" class="section">Some section</div>
 		    <div id="section3" class="section">Some section</div>
 		    <div id="section4" class="section">Some section</div>
 		</div>
@@ -48,15 +50,15 @@
 	    $('#pagepiling').pagepiling({
 		    onLeave: function(index, nextIndex, direction) {
 			    if (index == 1 && direction == 'down') {
-					$('#loose1').animate({bottom:'1450px', opacity:0.4}, 2000);
-					$('#loose2').animate({bottom:'1350px', opacity:0.3}, 2150);
-					$('#loose3').animate({bottom:'1550px', opacity:0.3}, 2650);
-					$('#loose4').animate({bottom:'1150px', opacity:0.4}, 2000);
-					$('#loose5').animate({bottom:'1290px', opacity:0.3}, 2150);
-					$('#loose6').animate({bottom:'1300px', opacity:0.3}, 2650);
-					$('#loose7').animate({bottom:'1410px', opacity:0.4}, 2000);
-					$('#loose8').animate({bottom:'1240px', opacity:0.3}, 2150);
-					$('#loose9').animate({bottom:'1510px', opacity:0.3}, 2650);
+					$('#loose1').animate({bottom:'450px', opacity:1}, 2000);
+					$('#loose2').animate({bottom:'350px', opacity:1}, 2150);
+					$('#loose3').animate({bottom:'550px', opacity:1}, 2650);
+					$('#loose4').animate({bottom:'150px', opacity:1}, 2000);
+					$('#loose5').animate({bottom:'290px', opacity:0.3}, 2150);
+					$('#loose6').animate({bottom:'300px', opacity:0.3}, 2650);
+					$('#loose7').animate({bottom:'410px', opacity:0.4}, 2000);
+					$('#loose8').animate({bottom:'240px', opacity:0.3}, 2150);
+					$('#loose9').animate({bottom:'510px', opacity:0.3}, 2650);
 			    }
 		    }
 	    });
