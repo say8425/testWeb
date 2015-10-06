@@ -9,8 +9,7 @@
 	font-family: 'NotoSansKR';
 	src: url('https://d1syjqtm3n9oqz.cloudfront.net/notoSana-hestia/NotoSansKR-Regular-Hestia.woff') format('woff')
 }
-	
-	
+		
 h2 {
 	font-family: 'NotoSansKR';
 }
@@ -92,6 +91,13 @@ h2 {
 
 #section4 {
 	background-color: green;
+}
+
+#videoLogo {
+	position: relative;	
+	display: block;
+	margin: 0 auto;
+	z-index: 5;
 }
 
 #leferiIntro {
