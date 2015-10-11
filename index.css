@@ -39,46 +39,65 @@ h2 {
 	overflow: hidden;
 }
 
+#videoLogo {
+	position: relative;	
+	display: block;
+	margin: 0 auto;
+	z-index: 5;
+	top: 18%;
+}
+
 .loose {
-	z-index: 10;
-	position: absolute;
-	bottom: -420px;
+	z-index: 5;
+	position: relative;
+/* 	bottom: -420px; */
+}
+
+#loose1 {
+	left: 10%;
+	bottom: 25%;
 }
 
 #loose2 {
-	left: 150px;
+	left: 13%;
+	bottom: 40%;
+	width: 9%
 }
 
 #loose3 {
-	left: 275px;
+	left: 9%;
+	bottom: 38%;
+	width: 7%;
+	z-index: 4;
 }
 
 #loose4 {
-	left: 335px;
-}
-
-#loose4 {
-	left: 475px;
+	left: 44%;
+	bottom: 59%;
+	width: 18%;
+	z-index: 4;
 }
 
 #loose5 {
-	left: 575px;
+	left: 25%;
+	bottom: 62%;
+	width: 6%;	
 }
 
 #loose6 {
-	left: 635px;
+	right: 33%;
+	top: 32%;
 }
 
 #loose7 {
-	left: 795px;
+	left: 2%;
+	top: 26%;
+	width: 8%;
 }
 
 #loose8 {
-	left: 900px;
-}
-
-#loose9 {
-	left: 1100px;
+	left: 14%;
+	width: 7%;
 }
 
 #section2 {
@@ -91,13 +110,6 @@ h2 {
 
 #section4 {
 	background-color: green;
-}
-
-#videoLogo {
-	position: relative;	
-	display: block;
-	margin: 0 auto;
-	z-index: 5;
 }
 
 #leferiIntro {

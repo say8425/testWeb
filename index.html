@@ -22,16 +22,19 @@
 		
 		<div id="pagepiling">
 		    <div id="section1" class="section">
-			    <video id="leferiIntro" poster="img/videoWhite.png" loop autoplay controls muted>
+			    <video id="leferiIntro" poster="img/videoWhite.png" controls muted>
 			    	<source src="https://d1syjqtm3n9oqz.cloudfront.net/leferi-video/leferiIntro.mp4" type="video/mp4">
 		    	</video>
 		    	<img id="videoLogo" src="img/leferiVideoLogo.png">
+		    	
 		    	<img class="loose" id="loose1" src="img/loose3.png">
 				<img class="loose" id="loose2" src="img/loose1.png">
 				<img class="loose" id="loose3" src="img/loose4.png">
 				<img class="loose" id="loose4" src="img/loose4.png">
 				<img class="loose" id="loose5" src="img/loose2.png">
-
+				<img class="loose" id="loose6" src="img/loose5.png">
+				<img class="loose" id="loose7" src="img/loose2.png">
+				<img class="loose" id="loose8" src="img/loose4.png">
 		    </div>
 		    
 		    <div id="section2" class="section">
@@ -46,17 +49,18 @@
 	$(function() {
 	    $('#pagepiling').pagepiling({
 		    onLeave: function(index, nextIndex, direction) {
+/*
 			    if (index == 1 && direction == 'down') {
-					$('#loose1').animate({bottom:'450px', opacity:1}, 2000);
-					$('#loose2').animate({bottom:'350px', opacity:1}, 2150);
-					$('#loose3').animate({bottom:'550px', opacity:1}, 2650);
-					$('#loose4').animate({bottom:'150px', opacity:1}, 2000);
-					$('#loose5').animate({bottom:'290px', opacity:0.3}, 2150);
-					$('#loose6').animate({bottom:'300px', opacity:0.3}, 2650);
-					$('#loose7').animate({bottom:'410px', opacity:0.4}, 2000);
-					$('#loose8').animate({bottom:'240px', opacity:0.3}, 2150);
-					$('#loose9').animate({bottom:'510px', opacity:0.3}, 2650);
+					$('#section1 #loose1').animate({bottom:'450px', opacity:1}, 2000);
+					$('#section1 #loose2').animate({bottom:'350px', opacity:1}, 2150);
+					$('#section1 #loose3').animate({bottom:'550px', opacity:1}, 2650);
+					$('#section1 #loose4').animate({bottom:'150px', opacity:1}, 2000);
+					$('#section1 #loose5').animate({bottom:'290px', opacity:0.3}, 2150);
+					$('#section1 #loose6').animate({bottom:'300px', opacity:0.3}, 2650);
+					$('#section1 #loose7').animate({bottom:'410px', opacity:0.4}, 2000);
+					$('#section1 #loose8').animate({bottom:'240px', opacity:0.3}, 2150);
 			    }
+*/
 		    }
 	    });
 	    $("#leferiIntro").get(0).play();
