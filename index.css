@@ -26,6 +26,11 @@ h2 {
     padding: 0px 25px;
     line-height: 100px;
 	display: inline-flex;
+	
+	border-bottom: 1px solid transparent;
+	-webkit-border-image: url(img/navBorder.png) 0 0 30 0 round;
+    -o-border-image: url(img/navBorder.png) 0 0 30 0 round;
+    border-image: url(img/navBorder.png) 0 0 30 0 round;
 }
 
 #menu nav {
