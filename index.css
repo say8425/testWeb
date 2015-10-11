@@ -19,7 +19,7 @@ h2 {
 	height: 100px;
 	position: fixed;
 	z-index: 10;
-	background-color: rgba(255, 255, 255, 0.2);
+	background-color: RGBA(251, 251, 251, 0.5);
 	color: white;
 	text-align: justify;
     letter-spacing: 1px;
@@ -33,17 +33,38 @@ h2 {
     border-image: url(img/navBorder.png) 0 0 30 0 round;
 }
 
-#menu nav {
-}
-
 #navLogo {
 	height: 50%;
 	margin: 25px;
 }
 
 #menu a {
-	color: #C4C4C4;
+	color: #898989;
+}
+
+#menu a#home {
+	color: #D78179;
+}
+
+#menu a#kor {
+	color: #D78179;
+}
+
+
+#menu-nav a {
 	padding-right: 10px;
+}
+
+#menu #trans-nav {
+	border-radius: 25px;
+	border: 2px solid white;
+	right: 7%;
+	position: absolute;
+	height: 30px;
+	margin: 33px;
+	padding: 0px 20px;
+	line-height: 31px;
+	
 }
 
 #section1 {
