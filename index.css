@@ -44,25 +44,8 @@ a {
 	margin: 25px;
 }
 
-#menu a {
-	color: #898989;
-}
-
-#menu a#home {
-	color: #D78179;
-}
-
-#menu a#kor {
-	color: #D78179;
-}
-
-
-#menu-nav a {
-	padding-right: 10px;
-}
-
 #menu #menu-nav {
-	padding-left: 20px;
+	padding-left: 30px;
 }
 
 #menu #trans-nav {
@@ -73,8 +56,27 @@ a {
 	height: 30px;
 	margin: 33px;
 	padding: 0px 20px;
-	line-height: 31px;
-	
+	line-height: 31px;	
+}
+
+#menu a {
+	color: #898989;
+}
+
+#menu-nav a {
+	padding-right: 10px;
+}
+
+.inner-padding {
+	padding-left: 20px;
+}
+
+#menu a#home {
+	color: #D78179;
+}
+
+#menu a#kor {
+	color: #D78179;
 }
 
 #section1 {
