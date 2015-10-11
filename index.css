@@ -7,11 +7,17 @@
 */
 @font-face {
 	font-family: 'NotoSansKR';
-	src: url('https://d1syjqtm3n9oqz.cloudfront.net/notoSana-hestia/NotoSansKR-Regular-Hestia.woff') format('woff')
+	src: local('NotoSansKR-Regular-Hestia'),
+	url('https://d1syjqtm3n9oqz.cloudfront.net/notoSana-hestia/eot/NotoSansKR-Regular-Hestia.woff?#iefix') format('embedded-opentype'),
+	url('https://d1syjqtm3n9oqz.cloudfront.net/notoSana-hestia/woff/NotoSansKR-Regular-Hestia.woff') format('woff'),
 }
 		
 h2 {
 	font-family: 'NotoSansKR';
+}
+
+a {
+	font-family: 'Lucida Grande';
 }
 
 #menu {
