@@ -93,6 +93,9 @@ a {
 	position: relative;	
 	display: block;
 	margin: 0 auto;
+	top: 6%;
+	left: 5.1%;
+	width: 90px;
 	z-index: 5;
 }
 
