@@ -1,11 +1,13 @@
-<html>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta charset="UTF-8">
 		<title>레페리 테스트</title>	
+		<link rel="stylesheet" type="text/css" href="jquery.fullPage.css">
 		<link rel="stylesheet" type="text/css" href="index.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="jquery.pagepiling.css" />
-		<script type="text/javascript" src="jquery.pagepiling.js"></script>
+		<script type="text/javascript" src="vendors/jquery.slimscroll.min.js"></script>
+		<script type="text/javascript" src="jquery.fullPage.js"></script>
 	</head>
 	<body>
 		<header id="menu">
@@ -24,11 +26,10 @@
 				<a class="inner-padding">ENG</a>
 				<a class="inner-padding">CHI</a>
 			</nav>
-				
 		</header>
 		
-		<div id="pagepiling">
-		    <div id="section1" class="section">
+		<div id="fullpage">
+		    <div id="section1" class="section active">
 			    <video id="leferiIntro" poster="img/videoWhite.png" controls muted>
 			    	<source src="https://d1syjqtm3n9oqz.cloudfront.net/leferi-video/leferiIntro.mp4" type="video/mp4">
 		    	</video>
@@ -52,23 +53,7 @@
 
 <script>
 	$(function() {
-	    $('#pagepiling').pagepiling({
-		    onLeave: function(index, nextIndex, direction) {
-/*
-			    if (index == 1 && direction == 'down') {
-					$('#section1 #loose1').animate({bottom:'450px', opacity:1}, 2000);
-					$('#section1 #loose2').animate({bottom:'350px', opacity:1}, 2150);
-					$('#section1 #loose3').animate({bottom:'550px', opacity:1}, 2650);
-					$('#section1 #loose4').animate({bottom:'150px', opacity:1}, 2000);
-					$('#section1 #loose5').animate({bottom:'290px', opacity:0.3}, 2150);
-					$('#section1 #loose6').animate({bottom:'300px', opacity:0.3}, 2650);
-					$('#section1 #loose7').animate({bottom:'410px', opacity:0.4}, 2000);
-					$('#section1 #loose8').animate({bottom:'240px', opacity:0.3}, 2150);
-			    }
-*/
-		    }
-	    });
-	    $("#leferiIntro").get(0).play();
+		$('#fullpage').fullpage();
 	});
 	
 </script>

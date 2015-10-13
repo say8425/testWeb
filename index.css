@@ -79,9 +79,12 @@ a {
 	color: #D78179;
 }
 
+.section {
+	height: auto !important;
+}
+
 #section1 {
 	background-color: white;
-	overflow: hidden;
 }
 
 #videoLogo {
