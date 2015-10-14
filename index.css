@@ -97,6 +97,7 @@ a {
 	left: 5.1%;
 	width: 90px;
 	z-index: 5;
+	cursor: pointer;
 }
 
 .loose {
