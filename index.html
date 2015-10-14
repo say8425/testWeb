@@ -30,9 +30,11 @@
 		
 		<div id="fullpage">
 		    <div id="section1" class="section active">
-			    <video id="leferiIntro" poster="img/videoPoster.png" muted>
-			    	<source src="https://d1syjqtm3n9oqz.cloudfront.net/leferi-video/leferiIntro.mp4" type="video/mp4">
-		    	</video>
+			    <div id="introWrap">
+				    <video id="leferiIntro" poster="img/videoPoster.png" muted>
+				    	<source src="https://d1syjqtm3n9oqz.cloudfront.net/leferi-video/leferiIntro.mp4" type="video/mp4">
+			    	</video>
+			    </div>
 		    	<img id="videoLogo" src="img/videoPlay.png">	
 		    	<img class="loose" id="loose1" src="img/loose3.png">
 				<img class="loose" id="loose2" src="img/loose1.png">
@@ -56,6 +58,21 @@
 <script>
 	$(function() {
 		$('#fullpage').fullpage();
-	});
-	
+		
+		$('#videoLogo').click(function() {
+		    $("#leferiIntro").get(0).play();
+		    $('#videoLogo').hide();
+		});
+		
+		$('#introWrap').click(function() {
+			if ($('#videoLogo').is(":hidden")) {
+				if ($('#leferiIntro').get(0).paused) {
+					$("#leferiIntro").get(0).play();
+				} else {
+					$("#leferiIntro").get(0).pause();
+				}
+			}
+			console.log('clicked');			
+		});
+	});	
 </script>
