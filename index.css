@@ -34,9 +34,9 @@ a {
 	display: inline-flex;
 	
 	border-bottom: 1px solid transparent;
-	-webkit-border-image: url(img/navBorder.png) 0 0 30 0 round;
-    -o-border-image: url(img/navBorder.png) 0 0 30 0 round;
-    border-image: url(img/navBorder.png) 0 0 30 0 round;
+	-webkit-border-image: url(img/navBorder.png) 0 0 30 0;
+    -o-border-image: url(img/navBorder.png) 0 0 30 0;
+    border-image: url(img/navBorder.png) 0 0 30 0;
 }
 
 #navLogo {
