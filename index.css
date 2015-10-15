@@ -183,3 +183,9 @@ a {
 	background-size: contain;
 	object-fit: cover;
 }
+
+#footer {
+	color: #9a9a9a;
+	background-color: #e9e9e9;
+	height: 150px;
+}
