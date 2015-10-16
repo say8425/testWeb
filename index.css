@@ -46,12 +46,13 @@ a {
 }
 
 #menu #menu-nav {
+	margin: 0px 10%;
 }
 
 #menu #trans-nav {
 	border-radius: 25px;
 	border: 2px solid white;
-	right: 7%;
+	right: 0%;
 	position: absolute;
 	height: 30px;
 	margin: 33px;
