@@ -206,6 +206,12 @@ a {
 	object-fit: cover;
 }
 
+#section1-bottom {
+	z-index: 5
+	position: absolute;
+	bottom: 0;
+}
+
 #footer {
 	color: #9a9a9a;
 	background-color: #e9e9e9;
