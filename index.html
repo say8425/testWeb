@@ -8,6 +8,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script type="text/javascript" src="vendors/jquery.slimscroll.min.js"></script>
 		<script type="text/javascript" src="jquery.fullPage.js"></script>
+		<script type="text/javascript" src="jquery.transit.js"></script>
 	</head>
 	<body>
 		<header id="menu">
@@ -36,14 +37,18 @@
 			    	</video>
 			    </div>
 		    	<img id="videoLogo" src="img/videoPlay.png">	
-		    	<img class="loose" id="loose1" src="img/loose3.png">
-				<img class="loose" id="loose2" src="img/loose1.png">
-				<img class="loose" id="loose3" src="img/loose4-tr.png">
-				<img class="loose" id="loose4" src="img/loose4.png">
-				<img class="loose" id="loose5" src="img/loose2.png">
-				<img class="loose" id="loose6" src="img/loose5.png">
-				<img class="loose" id="loose7" src="img/loose2.png">
-				<img class="loose" id="loose8" src="img/loose4-tr.png">
+		    	<img class="loose" id="loose1" src="img/b2.png">
+				<img class="loose" id="loose2" src="img/a1.png">
+				<img class="loose" id="loose3" src="img/b4.png">
+				<img class="loose" id="loose4" src="img/a2.png">
+				<img class="loose" id="loose5" src="img/a3.png">
+				<img class="loose" id="loose6" src="img/c2.png">
+				<img class="loose" id="loose7" src="img/a3.png">
+				<img class="loose" id="loose8" src="img/b4.png">
+				<img id="model-back" src="img/main_visual_bg.png">
+				<img id="model" src="img/main_visual.png">
+				<img id="grid" src="img/line.png">
+				<img id="section1-bottom" src="img/section1-border.png">
 		    </div>
 		    
 		    <div id="section2" class="section">
@@ -63,11 +68,53 @@
 
 <script>
 	$(function() {
-		$('#fullpage').fullpage();
+		var wHeight = $(window).height();
+		$('#section1 #videoLogo').prop( "disabled", true);
+		
+		$('#fullpage').fullpage({	
+			afterLoad: function(anchorLink, index) {
+				var loadSection = $(this);	
+				
+				if (index == 1) {
+					$('#section1 #loose1').transition(
+					{y: -wHeight * 0.3}, 1050, 'cubic-bezier(0.550, 0.085, 0.680, 0.530)');
+					$('#section1 #loose2').transition(
+					{y: -wHeight * 0.53}, 1050, 'cubic-bezier(0.550, 0.085, 0.680, 0.530)');
+					$('#section1 #loose3').transition(
+					{y: -wHeight * 0.48}, 1050, 'cubic-bezier(0.550, 0.085, 0.680, 0.530)');
+					$('#section1 #loose4').transition(
+					{y: -wHeight * 0.78}, 1050, 'cubic-bezier(0.550, 0.085, 0.680, 0.530)');
+					$('#section1 #loose5').transition(
+					{y: -wHeight * 0.78}, 1050, 'cubic-bezier(0.550, 0.085, 0.680, 0.530)');
+					$('#section1 #loose6').transition(
+					{y: -wHeight * 0.08}, 1050, 'cubic-bezier(0.550, 0.085, 0.680, 0.530)');
+					$('#section1 #loose7').transition(
+					{y: -wHeight * 0.30}, 1050, 'cubic-bezier(0.550, 0.085, 0.680, 0.530)');
+					$('#section1 #loose8').transition(
+					{y: -wHeight * 0.38}, 1050, 'cubic-bezier(0.550, 0.085, 0.680, 0.530)');
+					$('#section1 #model-back').transition(
+					{opacity: 1.0}, 750, 'cubic-bezier(0.550, 0.085, 0.680, 0.530)');
+					$('#section1 #model').delay(500).transition(
+					{opacity: 1.0}, 1500, 'cubic-bezier(0.550, 0.085, 0.680, 0.530)');
+					$('#section1 #videoLogo').delay(750).transition(
+					{opacity: 1.0}, 1500, 'cubic-bezier(0.550, 0.085, 0.680, 0.530)').prop("disabled", false);
+/*
+					$('#section1 #grid').transition(
+					{width: 550, opacity: 1.0}, 750, 'ease');
+*/
+					
+					$('#section1 #grid').animate({ marginLeft: "0", opacity: 1 }, 1500);
+				}
+			}
+		});
 		
 		$('#videoLogo').click(function() {
 		    $("#leferiIntro").get(0).play();
 		    $('#videoLogo').hide();
+		    $('#section1 #model-back').hide();
+		    $('#section1 #model').hide();
+		    $('#section1 #videoLogo').hide();
+		    $('#section1 #grid').hide();
 		});
 		
 		$('#introWrap').click(function() {
