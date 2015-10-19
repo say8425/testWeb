@@ -67,7 +67,7 @@
 </html>
 
 <script>
-	$(function() {
+	$(window).on('load', function() {
 		var wHeight = $(window).height();
 		var newRatio = wHeight / 927;
 				
@@ -125,7 +125,6 @@
 					$("#leferiIntro").get(0).pause();
 				}
 			}
-			console.log('clicked');			
 		});
 		
 		// Adjusting margin for Section 1 image
