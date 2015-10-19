@@ -69,33 +69,13 @@
 <script>
 	$(function() {
 		var wHeight = $(window).height();
-		var newRatio = wHeight / 927
-		
-		var makeReactiveWidth = function(model) {
-			var width = $(model).width();
-			var newWidth = width * newRatio;
-			
-			var newMargin = (newWidth / 2) + (getConstant(model) * newRatio);
-			newMargin = newMargin * -1;
-			
-			$(model).width(newWidth);
-			$(model).css('margin-left', newMargin);
-		};
-		
-		var getConstant = function(model) {
-			if (model === '#section1 #model-back') {
-				return 200;
-			} else if (model === '#section1 #model') {
-				return -195;
-			}
-		};
-		
+		var newRatio = wHeight / 927;
+				
+		// Adjusting section1 image		
 		makeReactiveWidth('#section1 #model-back');
 		makeReactiveWidth('#section1 #model');
 		
 		$('#section1 #videoLogo').prop( "disabled", true);
-		
-		
 		$('#fullpage').fullpage({	
 			afterLoad: function(anchorLink, index) {
 				var loadSection = $(this);	
@@ -123,11 +103,6 @@
 					{opacity: 1.0}, 1500, 'cubic-bezier(0.550, 0.085, 0.680, 0.530)');
 					$('#section1 #videoLogo').delay(750).transition(
 					{opacity: 1.0}, 1500, 'cubic-bezier(0.550, 0.085, 0.680, 0.530)').prop("disabled", false);
-/*
-					$('#section1 #grid').transition(
-					{width: 550, opacity: 1.0}, 750, 'ease');
-*/
-					
 					$('#section1 #grid').animate({opacity: 1 }, 1500);
 				}
 			}
@@ -152,5 +127,25 @@
 			}
 			console.log('clicked');			
 		});
-	});	
+		
+		// Adjusting margin for Section 1 image
+		function makeReactiveWidth(model) {
+			var width = $(model).width();
+			var newWidth = width * newRatio;
+			
+			var newMargin = (newWidth / 2) + (getConstant(model) * newRatio);
+			newMargin = newMargin * -1;
+			
+			$(model).width(newWidth);
+			$(model).css('margin-left', newMargin);
+		};
+		
+		function getConstant(model) {
+			if (model === '#section1 #model-back') {
+				return 200;
+			} else if (model === '#section1 #model') {
+				return -195;
+			}
+		};
+	});
 </script>
