@@ -69,7 +69,32 @@
 <script>
 	$(function() {
 		var wHeight = $(window).height();
+		var newRatio = wHeight / 927
+		
+		var makeReactiveWidth = function(model) {
+			var width = $(model).width();
+			var newWidth = width * newRatio;
+			
+			var newMargin = (newWidth / 2) + (getConstant(model) * newRatio);
+			newMargin = newMargin * -1;
+			
+			$(model).width(newWidth);
+			$(model).css('margin-left', newMargin);
+		};
+		
+		var getConstant = function(model) {
+			if (model === '#section1 #model-back') {
+				return 200;
+			} else if (model === '#section1 #model') {
+				return -195;
+			}
+		};
+		
+		makeReactiveWidth('#section1 #model-back');
+		makeReactiveWidth('#section1 #model');
+		
 		$('#section1 #videoLogo').prop( "disabled", true);
+		
 		
 		$('#fullpage').fullpage({	
 			afterLoad: function(anchorLink, index) {
