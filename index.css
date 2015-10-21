@@ -101,6 +101,15 @@ a {
 	position: absolute;
 }
 
+.horizon-center {
+	left: 50%;
+}
+
+.center-center {
+	top: 50%;
+	left: 50%;
+}
+
 #section3 {
 	background-color: white;
 }
