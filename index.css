@@ -85,10 +85,12 @@ a {
 }
 
 .horizon-center {
+	position: absolute;
 	left: 50%;
 }
 
 .center-center {
+	position: absolute;
 	top: 50%;
 	left: 50%;
 }
