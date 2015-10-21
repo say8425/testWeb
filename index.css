@@ -10,7 +10,11 @@ h2 {
 }
 
 a {
-	font-family: 'Lucida Grande';
+	font-family: 'NotoSansKR';
+}
+
+p {
+	font-family: 'NotoSansKR';
 }
 
 #menu {
