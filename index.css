@@ -70,10 +70,6 @@ a {
 	padding-right: 10px;
 }
 
-.inner-padding {
-	padding-left: 20px;
-}
-
 #menu a#home {
 	color: #D78179;
 }
@@ -82,18 +78,12 @@ a {
 	color: #D78179;
 }
 
-.section {
-	height: auto !important;
+.inner-padding {
+	padding-left: 20px;
 }
 
-#videoLogo {
-	position: relative;	
-	display: block;
-	margin: 0 auto;
-	top: 45px;
-	z-index: 10;
-	opacity: 0.0;
-	cursor: pointer;
+.section {
+	height: auto !important;
 }
 
 .loose {

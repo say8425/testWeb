@@ -27,6 +27,16 @@
 	margin-left: -320px;
 }
 
+#videoLogo {
+	position: relative;	
+	display: block;
+	margin: 0 auto;
+	top: 45px;
+	z-index: 10;
+	opacity: 0.0;
+	cursor: pointer;
+}
+
 #leferiIntro {
 	position: absolute;
 	z-index: 4;
