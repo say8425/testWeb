@@ -9,6 +9,17 @@
 	display: inherit !important;
 }
 
+#section2 .fp-tableCell {
+	z-index: 5;
+	border: 20px solid transparent;
+	-webkit-border-image: url(img/section2-border.png) 20;
+    -o-border-image: url(img/section2-border.png) 20;
+    border-image: url(img/section2-border.png) 20;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
 #asia {
 	width: 420px;
 	margin-top: -185px;
