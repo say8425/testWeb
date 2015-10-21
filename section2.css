@@ -5,18 +5,9 @@
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	background-size: cover
-}
-
-#section2 .fp-tableCell {
-	z-index: 5;
-	border: 20px solid transparent;
-	-webkit-border-image: url(img/section2-border.png) 20;
-    -o-border-image: url(img/section2-border.png) 20;
-    border-image: url(img/section2-border.png) 20;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
+	background-size: cover;
+	
+	display: inherit !important;
 }
 
 #section2 #loose1 {
