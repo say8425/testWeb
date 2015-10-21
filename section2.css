@@ -13,9 +13,7 @@
     -webkit-box-sizing: border-box;
 }
 
-#section2 {
-	#loose1 {
-		left: 0px;
-		top: -126px;
-	}
+#section2 #loose1 {
+	left: 0px;
+	top: -126px;
 }
