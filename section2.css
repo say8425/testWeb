@@ -5,8 +5,6 @@
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	
-	display: inherit !important;
 }
 
 #section2 .fp-tableCell {
