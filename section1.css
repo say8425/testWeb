@@ -24,6 +24,13 @@
 	margin-left: -320px;
 }
 
+#video-letter {
+	z-index: 10;
+	margin-top: 27px;
+	margin-left: -520px;
+	opacity: 0.0;
+}
+
 #videoLogo {
 	position: relative;	
 	display: block;
