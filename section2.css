@@ -19,34 +19,34 @@
 }
 
 #asia {
-	width: 420px;
-	margin-top: -185px;
-	margin-left: -445px;
+	width: 415px;
+	margin-top: -152px;
+	margin-left: -443px;
 	z-index: 5;
 }
 
 #map {
 	width: 425px;
-	margin-top: -215px;
+	margin-top: -183px;
 	margin-left: -256px;
 }
 
 #map-back {
-	width: 840px;
-	margin-top: -200px;
-	margin-left: -265px;
+	width: 810px;
+	margin-top: -165px;
+	margin-left: -240px;
 	
 }
 
 #section2 #title {
-	margin-top: -45px;
+	margin-top: -14px;
 	margin-left: 137px;
 	font-size: 12.5px;
 	color: #333333;
 }
 
 #section2 #content {
-	margin-top: 17px;
+	margin-top: 48px;
 	margin-left: 137px;
 	font-size: 10px;
 	color: #9a9a9a;
