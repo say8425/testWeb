@@ -1,0 +1,14 @@
+#section4 {
+	background-color: white;
+}
+
+#section4 .fp-tableCell {
+	z-index: 5;
+	border: 20px solid transparent;
+	-webkit-border-image: url(img/section4-border.png) 20;
+    -o-border-image: url(img/section4-border.png) 20;
+    border-image: url(img/section4-border.png) 20;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
