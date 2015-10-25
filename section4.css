@@ -12,3 +12,42 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
+
+#section4 #head-image {
+	width: 323px;
+	margin-top: -213px;
+	margin-left: -440px;
+}
+
+#section4 #head-photo {
+	width: 390px;
+	margin-top: -214px;
+	margin-left: 47px;
+}
+
+#section4 #title {
+	color: #333333;
+	font-size: 12.5px;
+	margin-top: -28px;
+	margin-left: 45px;
+}
+
+#section4 #content {
+	color: #333333;
+	font-size: 10px;
+	margin-top: 44px;
+	margin-left: 44px;
+}
+
+#collarbo-with {
+	color: #333333;
+	font-size: 12.5px;
+	margin-top: 198px;
+	margin-left: -440px;
+}
+
+#collarbo-list {
+	width: 902px;
+	margin-top: 223px;
+	margin-left: -457px;
+}
